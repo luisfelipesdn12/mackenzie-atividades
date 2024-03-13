@@ -96,7 +96,7 @@ fi
 echo "$nome não é nem um arquivo nem um diretório"
 ```
 
-![5.png]
+![](5.png)
 
 ## 6. Soma entre intervalos
 

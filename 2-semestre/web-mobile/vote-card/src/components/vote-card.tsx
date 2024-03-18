@@ -20,7 +20,7 @@ export default function VoteCard() {
         <Card className="flex flex-col justify-center items-center text-center w-80">
             <CardHeader className="flex justify-center items-center gap-2">
                 <Avatar className="bg-muted w-32 h-32 border">
-                    <AvatarImage className="object-contain" src={`https://doodleipsum.com/700/avatar?n=${id}`} />
+                    <AvatarImage className="object-contain" src={`https://thispersondoesnotexist.com?n=${id}`} />
                 </Avatar>
                 <CardDescription>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate est similique, culpa quaerat.

@@ -1,5 +1,5 @@
 public class Contador {
-    int n = 0;
+    int n = 0;  
 
     void zerar() {
         this.n = 0;

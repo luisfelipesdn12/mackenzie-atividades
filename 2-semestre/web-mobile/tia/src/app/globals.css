@@ -76,7 +76,7 @@
 }
 
 .mack-card {
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(/background.png);

@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.card {
+  min-width: 49%;
+  max-width: 49%;
+  min-height: 20rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 3rem;
+  gap: 1rem;
+  text-align: center;
+  border-left: #8d8d8d 10px solid;
+  box-shadow: 0.4rem 0.4rem 0.2rem #00000022;
+}
+
+.card.promotion {
+  border-left-color: #ee4b4b;
+}
+
+.card img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100%;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}

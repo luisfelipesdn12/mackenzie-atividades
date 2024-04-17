@@ -1,25 +1,27 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        Funcionario f1 = new Funcionario(
-            "12345678-0",
-            "Antonio Ferreira",
-            "Vendas",
-            3000
-        );
+        int[] vet = {1, 2, 3, 4, 5};
 
-        f1.recebeAumento(20);
-        f1.exibeInformações();
-        System.out.println(f1.calculaGanhoAnual());
+        // Prova A
+        /* for (int i = 0; i < vet.length - 1; i++) {
+            vet[i] = vet[i+1];
+            vet[i+1] = vet[i];
+        } */
 
-        Funcionario f2 = new Funcionario(
-            "87654321-0",
-            "Luis Felipe",
-            "Desenvolvimento",
-            4000
-        );
+        // Prova B
+       /*  for (int i = 1; i < vet.length; i++) {
+            vet[i-1] = vet[i];
+            vet[i] = vet[i-1];
+        } */
 
-        f2.recebeAumento(50);
-        f2.exibeInformações();
-        System.out.println(f2.calculaGanhoAnual());
+        // Prova C
+        for (int i = vet.length; i > 0; i--) {
+            vet[i-1] = vet[i];
+            vet[i] = vet[i-1];
+        }
+
+        System.out.println(Arrays.toString(vet));
     }
 }

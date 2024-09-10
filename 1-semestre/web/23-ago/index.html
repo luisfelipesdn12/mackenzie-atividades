@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <style>
+        header {
+            background-color: red;
+            padding: 1rem;
+        }
+        
+        nav {
+            background-color: yellow;
+            padding: 1rem;
+        }
+
+        nav > a {
+            margin-right: 1rem;
+        }
+
+        article > header {
+            background-color: brown;
+        }
+
+        article > section {
+            background-color: purple;
+            padding: 1rem;
+        }
+
+        article > footer {
+            background-color: peru;
+            padding: 1rem;
+        }
+
+        div {
+            display: flex;
+        }
+
+        aside {
+            background-color: greenyellow;
+            min-width: max-content;
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: pink;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de um blog</h1>
+    </header>
+    <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+    </nav>
+    <div>
+        <article>
+            <header>
+                <h2>Título do artigo</h2>
+                <time pubdate datetime="2023-08-32">23/08/2023</time>
+            </header>
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bill_Gates_2018.jpg/200px-Bill_Gates_2018.jpg" alt="Bill Bill_Gates_2018" srcset="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consectetur inventore temporibus sunt provident, atque aliquid tempora quibusdam dolorum explicabo minima error pariatur vero earum numquam consequatur totam eius voluptatum?</p>
+            </section>
+            <footer>
+                Criado por Luis
+            </footer>
+        </article>
+        <aside>
+            <h2>Posts relacionados</h2>
+            <ol>
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+                <li><a href="#">Post 3</a></li>
+                <li><a href="#">Post 4</a></li>
+                <li><a href="#">Post 5</a></li>
+                <li><a href="#">Post 6</a></li>
+            </ol>
+        </aside>
+    </div>
+    <footer>
+        <a href="#">Link para página principal do blog</a>
+    </footer>
+</body>
+</html>

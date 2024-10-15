@@ -12,6 +12,7 @@ public class Produto{
     this.codigo = codigo;
     this.descricao = descricao;
     this.preco = preco;
+
   }
   
   public int getCodigo() {

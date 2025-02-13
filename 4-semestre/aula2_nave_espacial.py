@@ -48,14 +48,20 @@ class NaveEspacial:
             self.energy -= 10  # Custo de energia para atirar
             player.hit(10)
             print(f"{self.name} lançou um projétil em {player.name}.")
+            bullet = Bullet(self)
+            bullets.append(bullet)
         else:
             print(f"{self.name} não tem energia suficiente para atirar.")
             return False
 
     def hit(self, damage):
+        if not self.alive:
+            return
+
         # Implementação para quando a nave é atingida
         self.shield -= damage
         if self.shield <= 0:
+            self.shield = 0
             self.alive = False
             print(f"{self.name} foi destruída.")
         else:
@@ -72,6 +78,39 @@ class NaveEspacial:
                 window.blit(self.image, self.position)
             text_surface = font.render(f'{self.name} - Vida: {self.shield} - Energia: {self.energy}', True, (0, 0, 0))
             screen.blit(text_surface, dest=self.text_position)
+
+class Bullet:
+    def __init__(self, owner):
+        self.owner = owner
+        self.speed = 5  # Velocidade do projétil
+        self.image = pygame.image.load('bullet.png')
+        self.image = pygame.transform.scale(self.image, (20, 20))
+        self.image_directions = {
+            "cima": pygame.transform.rotate(self.image, 0),
+            "direita": pygame.transform.rotate(self.image, 270),
+            "baixo": pygame.transform.rotate(self.image, 180),
+            "esquerda": pygame.transform.rotate(self.image, 90),
+        }
+        self.imagerect = self.image.get_rect()
+        self.direction = owner.direction
+        self.image = self.image_directions[self.direction]
+        self.position = owner.position
+
+    def move(self):
+        if self.direction == 'cima':
+            self.position = (self.position[0], self.position[1] - self.speed)
+        elif self.direction == 'direita':
+            self.position = (self.position[0] + self.speed, self.position[1])
+        elif self.direction == 'baixo':
+            self.position = (self.position[0], self.position[1] + self.speed)
+        elif self.direction == 'esquerda':
+            self.position = (self.position[0] - self.speed, self.position[1])
+
+    def draw(self, window):
+        if window is not None:
+            window.blit(self.image, self.position)
+
+bullets = []
 
 p1 = NaveEspacial(input("Insira o nome da nave do player 1: ") or "Player 1")
 p2 = NaveEspacial(input("Insira o nome da nave do player 2: ") or "Player 2")
@@ -154,10 +193,20 @@ while running:
     p1.move()
     p2.move()
 
+    for bullet in bullets:
+        bullet.move()
+        if (bullet.position[0] < 0 or
+            bullet.position[0] > screen.get_width() or
+            bullet.position[1] < 0 or
+            bullet.position[1] > screen.get_height()):
+            bullets.remove(bullet)
+
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
 
     # RENDER YOUR GAME HERE
+    for bullet in bullets:
+        bullet.draw(screen)
     p1.draw(screen)
     p2.draw(screen)
 

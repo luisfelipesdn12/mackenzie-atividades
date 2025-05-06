@@ -1,89 +1,9 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
-  <diagram name="Página-1" id="NXk6AuAGg8bSicqxE8H_">
+  <diagram name="Página-1" id="u1SdcBbTtnw9D1ZpNTuf">
     <mxGraphModel>
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" value="Cliente solicita aluguel de carro" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="163" y="8" width="260" height="78" as="geometry" />
-        </mxCell>
-        <mxCell id="3" value="Atendente faz solicitação de verificação de multas no Detran" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="163" y="136" width="260" height="102" as="geometry" />
-        </mxCell>
-        <mxCell id="4" value="Aguarda retorno do Detran" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="168" y="309" width="250" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="5" value="Detran verifica multas e retorna qtde de multas" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="163" y="434" width="260" height="78" as="geometry" />
-        </mxCell>
-        <mxCell id="6" value="Libera carro e registra locação" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="8" y="583" width="260" height="78" as="geometry" />
-        </mxCell>
-        <mxCell id="7" value="Notifica cliente por e-mail" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="18" y="711" width="240" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="8" value="Registra negação da locação" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="318" y="583" width="260" height="78" as="geometry" />
-        </mxCell>
-        <mxCell id="9" value="Aguarda 1 dia" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="368" y="711" width="160" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="10" value="Notifica cliente por e-mail" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="328" y="815" width="240" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="12" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.38;exitY=1;entryX=0.41;entryY=0;" edge="1" parent="1" source="3" target="4">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="241" y="274" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="13" value="Demora mais de 2 dias" style="curved=1;startArrow=none;endArrow=block;exitX=0.59;exitY=0;entryX=0.62;entryY=1;" edge="1" parent="1" source="4" target="3">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="345" y="274" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="14" value="Recebe retorno" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="5">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="15" value="qtde de multas &amp;lt;= 1" style="curved=1;startArrow=none;endArrow=block;exitX=0.19;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="5" target="6">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="138" y="548" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="16" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="7">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="17" value="qtde de multas &gt;= 2" style="curved=1;startArrow=none;endArrow=block;exitX=0.81;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="5" target="8">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="448" y="548" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="18" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="8" target="9">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="19" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="9" target="10">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
